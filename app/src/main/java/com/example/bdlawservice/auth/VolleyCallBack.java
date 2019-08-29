@@ -1,4 +1,9 @@
 package com.example.bdlawservice.auth;
 
-public class VolleyCallBack {
+import com.example.bdlawservice.entity.User;
+
+public abstract class VolleyCallBack {
+    public void action(int success, User user){
+
+    }
 }

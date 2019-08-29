@@ -16,7 +16,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/teabackground">
+            android:background="@drawable/lawbackground">
 
         </FrameLayout>
 
@@ -46,19 +46,19 @@
                 android:orientation="vertical">
 
                 <EditText
-                    android:id="@+id/reg_name_et"
+                    android:id="@+id/login_mobile"
                     style="@style/Font_family_light"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/edit_style"
-                    android:drawableLeft="@drawable/ic_person"
+                    android:drawableLeft="@drawable/ic_action_mobile"
                     android:drawablePadding="@dimen/padding_16"
-                    android:hint="User Name"
+                    android:hint="Mobile"
                     android:layout_marginTop="@dimen/margin_top_8"
                     android:layout_marginBottom="@dimen/margin_top_8"
                     android:layout_marginLeft="@dimen/margin_right_16"
                     android:layout_marginRight="@dimen/margin_right_16"
-                    android:inputType="text"
+                    android:inputType="phone"
                     android:maxLength="30"
                     android:maxLines="1"
                     android:padding="@dimen/padding_16"
@@ -68,7 +68,7 @@
 
 
                 <EditText
-                    android:id="@+id/reg_password_et"
+                    android:id="@+id/login_password"
                     style="@style/Font_family_light"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -99,7 +99,8 @@
                     android:background="@drawable/red_style"
                     android:text="LOGIN"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/text_20" />
+                    android:textSize="@dimen/text_20"
+                    android:onClick="login"/>
 
 
                 <LinearLayout
