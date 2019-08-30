@@ -10,6 +10,7 @@ import android.widget.Toast;
 import com.example.bdlawservice.R;
 import com.example.bdlawservice.entity.User;
 import com.example.bdlawservice.home.HomeActivity;
+import com.example.bdlawservice.static_classes.UserHolder;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -29,8 +30,10 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void action(int success, User user) {
                 if(success==1){
+                    UserHolder.setUser(user);
                     Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
                     startActivity(intent);
+                    finish();
                 }
                 else {
                     Toast.makeText(getApplicationContext(), "No user found", Toast.LENGTH_SHORT).show();

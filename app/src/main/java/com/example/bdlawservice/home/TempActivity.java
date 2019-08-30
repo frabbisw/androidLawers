@@ -1,30 +1,25 @@
 package com.example.bdlawservice.home;
 
 import android.content.Intent;
-import android.os.Bundle;
-import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
+import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.TextView;
+import android.view.View;
 
 import com.example.bdlawservice.R;
-import com.example.bdlawservice.auth.LoginActivity;
-import com.example.bdlawservice.entity.User;
-import com.example.bdlawservice.static_classes.UserHolder;
 
-public class HomeActivity extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+public class TempActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
+        setContentView(R.layout.activity_temp);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -36,20 +31,6 @@ public class HomeActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
-
-        setData();
-    }
-
-    private void setData() {
-        User user = UserHolder.getUser();
-
-        TextView userName = findViewById(R.id.user_profile_name);
-        TextView userAddress = findViewById(R.id.user_profile_address);
-        TextView userMobile = findViewById(R.id.user_profile_mobile);
-
-        userName.setText(user.getName());
-        userAddress.setText(user.getAddress());
-        userMobile.setText(user.getMobile());
     }
 
     @Override
@@ -98,12 +79,6 @@ public class HomeActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_manage) {
 
-        } else if (id == R.id.nav_logout) {
-            Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
-            startActivity(intent);
-            finish();
-        } else if (id == R.id.nav_nothing) {
-
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
@@ -111,8 +86,8 @@ public class HomeActivity extends AppCompatActivity
         return true;
     }
 
-    public void temp(View view) {
-        Intent intent = new Intent(getApplicationContext(), TempActivity.class);
+    public void home(View view) {
+        Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
         startActivity(intent);
     }
 }

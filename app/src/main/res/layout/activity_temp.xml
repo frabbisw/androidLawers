@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context=".home.HomeActivity"
+    tools:context=".home.TempActivity"
     tools:openDrawer="start">
 
     <android.support.design.widget.CoordinatorLayout
@@ -15,7 +15,7 @@
 
         <include layout="@layout/app_bar"/>
 
-        <include layout="@layout/content_home" />
+        <include layout="@layout/content_temp" />
 
     </android.support.design.widget.CoordinatorLayout>
 
