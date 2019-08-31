@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".auth.LoginActivity">
-
+    tools:context=".auth.LoginActivity"
+    android:orientation="vertical">
 
 
     <RelativeLayout
+        android:visibility="visible"
+        android:id="@+id/login_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -100,6 +103,7 @@
                     android:text="LOGIN"
                     android:textColor="@color/white"
                     android:textSize="@dimen/text_20"
+                    android:id="@+id/login_button"
                     android:onClick="login"/>
 
 
@@ -150,5 +154,14 @@
         </ScrollView>
 
     </RelativeLayout>
+
+    <ProgressBar
+        android:layout_marginTop="200dp"
+        android:textAlignment="center"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:id="@+id/load_bar"
+        android:visibility="gone"
+        tools:ignore="MissingConstraints" />
 
 </android.support.constraint.ConstraintLayout>

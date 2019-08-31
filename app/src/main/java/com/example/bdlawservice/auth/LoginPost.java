@@ -55,6 +55,7 @@ public class LoginPost {
                 public void onErrorResponse(VolleyError error) {
                     Log.e("FRERROR:: ", error.toString());
                     Toast.makeText(context, "Login Failed", Toast.LENGTH_SHORT).show();
+                    callBack.action(0, null);
                 }
             });
             queue.add(jsonOblect);

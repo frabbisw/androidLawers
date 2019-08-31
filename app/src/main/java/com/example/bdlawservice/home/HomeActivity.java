@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.example.bdlawservice.R;
 import com.example.bdlawservice.auth.LoginActivity;
+import com.example.bdlawservice.cache_management.AuthenticationCache;
 import com.example.bdlawservice.entity.User;
 import com.example.bdlawservice.static_classes.UserHolder;
 
@@ -99,6 +100,7 @@ public class HomeActivity extends AppCompatActivity
         } else if (id == R.id.nav_manage) {
 
         } else if (id == R.id.nav_logout) {
+            AuthenticationCache.clearUserFromCache(getApplicationContext());
             Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
             startActivity(intent);
             finish();
